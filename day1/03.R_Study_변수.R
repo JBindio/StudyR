@@ -20,3 +20,9 @@ c
 avg
 .total = 1 
 a.1 = iris
+
+#소금물 농도 구하기
+salt <- 70
+water <- 110
+result <- salt / (salt + water)* 100
+cat('소금 =', salt,'mg, 물 =', water, 'ml 농도 =', result, '%')
