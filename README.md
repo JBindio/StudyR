@@ -1,9 +1,9 @@
 # StudyR
 2022 빅데이터 분석 과정 - R 기초 학습
 
-![R](./image/R_logo.png)
+![R](./image/R_logo1.png)
 <!-- 
-<img src='./image/R_logo.png' width='20' height='40' /> 
+<img src='./image/R_logo1.png' /> 
 -->
 
 ## 1일차
