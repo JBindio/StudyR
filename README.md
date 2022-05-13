@@ -3,7 +3,7 @@
 
 ![R](./image/R_logo1.png)
 <!-- 
-<p align="center"><img src='./image/R_logo1.png' /></p>
+<img src='./image/R_logo1.png' align='center'/>
 -->
 
 ## 1일차
