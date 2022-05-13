@@ -3,7 +3,7 @@
 
 ![R](./image/R_logo.png)
 <!-- 
-<img src='./R_logo.png' /> 
+<img src='./image/R_logo.png' /> 
 -->
 
 ## 1일차
