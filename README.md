@@ -1,6 +1,11 @@
 # StudyR
 2022 빅데이터 분석 과정 - R 기초 학습
 
+![R](./image/R_logo.png)
+<!-- 
+<img src='./R_logo.png' /> 
+-->
+
 ## 1일차
 - R 학습시작
   - R 개요
