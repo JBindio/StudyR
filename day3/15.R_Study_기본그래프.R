@@ -27,3 +27,4 @@ barplot(ds, main = '좋아하는 계절', col = rainbow(4),
         names = c('가을', '봄', '여름', '겨울'), las=2)
       
 colors()
+
