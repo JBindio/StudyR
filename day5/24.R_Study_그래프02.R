@@ -79,3 +79,41 @@ plot(iris.2,
      main='붓꽃 꽃잎 길이 - 넓이 산점도',
  pch=c(group),
  col=color[group]) 
+
+# 산점도 범례
+plot(iris.2, main='Iris plot', pch=c(group), col=color[group])
+legend(x='bottomright',       # 범례의 위치
+legend=levels(iris$Species), # 범례의 내용
+col=c('red','green','blue'), # 색 지정
+pch=c(1:3))                  # 점의 모양
+
+# 자동차 썬팅 분석
+str(tinting)
+library(DAAG)
+group <- as.numeric(tinting$tint)
+color <- c('red','green','blue') # 점의 컬러
+plot(tinting$it, tinting$csoa, pch=c(group), col=color[group])
+
+group <- as.numeric(tinting$agegp)
+color <- c('red','blue') # 점의 컬러
+plot(tinting$it,tinting$csoa, pch=c(group), col=color[group]) 
+
+# 호주의 사회복지 서비스 분석
+str(socsupport) # 데이터의 구조 확인
+help(socsupport) # 변수별 의미 확인
+library(plotrix)
+ds <- table(socsupport$age)
+pie3D(ds, main = '연령 분포',
+labels = names(ds), # 파이별 레이블 지정
+labelcex = 1.0,     # 레이블의 폰트 크기
+explode = 0.1,      # 파이 간 간격
+radius = 1.5,       # 파이의 크기
+col = rainbow(length(ds))) # 파이의 색 지정
+
+boxplot(socsupport$emotionalsat~socsupport$age,
+        main='정서적 지원 제도 만족도 비교', col=rainbow(5))
+
+group <- as.numeric(socsupport$gender)
+color <- c('blue', 'red') # 여-blue, 남-red
+plot(socsupport[,c('emotionalsat', 'tangiblesat', 'age')], pch=group,
+     col=color[group])
