@@ -118,3 +118,47 @@ plot(pressure$temperature,
      xlab = '온도(섭씨)',
      ylab = '기압'
      )
+
+# RData로 데이터셋 불러오기
+getwd()
+load('./result_sales_dt.RData')
+View(result_sales_dt)
+save(result_sales_dt, file = './result_dt.RData')
+
+# 실전분석
+install.packages('Ecdat')
+library(Ecdat)
+str(Hdma)
+
+tbl1 <- table(Hdma$deny)
+tbl2 <- tbl / sum(tbl)
+tbl1 # 건수
+tbl2 # 비율
+
+names(tbl1) <- c('승인','거절')
+names(tbl2) <- c('승인','거절')
+barplot(tbl2, main = '주택담보대출 승인/거절 비율',
+ col = c('green','yellow'),
+ las = 1,
+ ylim = c(0,1),
+ ylab = '비율')
+
+barplot(tbl1, main = '주택담보대출 승인/거절 건수',
+        col = c('green','yellow'),
+        las = 1,
+        ylim = c(0, 2500),
+        ylab = '건수')
+
+hist(Hdma$lvr, main = '주택가격대비 대출금 비율',
+ col = rainbow(10), ylim = c(0, 1200))
+
+# dir 수입대비 보증금 비율
+# hir 수입대비 주택유지 비율
+# ccs 고객 신용등급
+# mcs 대출 신용등급
+
+df <- Hdma[, c('dir', 'hir', 'ccs', 'mcs')]
+df
+point.color <- c('green', 'red')
+plot(df, col = point.color[Hdma$deny])
+cor(df)
