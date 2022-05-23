@@ -89,3 +89,4 @@ colnames(res) <- res.dinner$breaks[2:7]
 barplot(res, main = '식사 시간에 따른 팁 비율 분포',
         col = c('#1d3557', '#a8dadc'),
         legend.text = c('Lunch', 'Dinner'))
+
